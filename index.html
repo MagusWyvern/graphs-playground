@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chartjs Playground</title>
+
+    <link rel="icon" href="https://www.chartjs.org/docs/latest/favicon.ico">
+
+    <!-- Import the Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+        <script defer>
+            
+            // Setup
+            const labels = [
+                'January',
+                'February',
+                'March',
+                'April',
+                'May',
+                'June',
+            ];
+
+            const data = {
+                labels: labels,
+                datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [0, 10, 5, 2, 20, 30, 45],
+                }]
+            };
+
+            // Config
+            const config = {
+                type: 'line',
+                data: data,
+                // https://www.chartjs.org/docs/latest/general/options.html
+                options: {
+                    layout: {
+                        padding: 20
+                    }
+                }
+            };
+
+            // Draw the chart, passing in the element's ID
+            const myChart = new Chart(
+                document.getElementById('myChart'),
+                config
+            );
+        </script>   
+    </div>
+</body>
+
+</html>
