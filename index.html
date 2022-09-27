@@ -5,19 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chartjs Playground</title>
+    <title>Chart.js and D3.js Playground</title>
 
     <link rel="icon" href="https://www.chartjs.org/docs/latest/favicon.ico">
 
     <!-- Import the Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+
+    <style>
+        .container {
+            width: 300px;
+            height: 250px;
+            border: 1px solid #a45dce;
+        }
+
+        .bar {
+            fill: #a45dce;
+        }
+    </style>
 </head>
 
 <body>
     <div>
         <canvas id="myChart"></canvas>
         <script defer>
-            
+
             // Setup
             const labels = [
                 'January',
@@ -55,7 +67,13 @@
                 document.getElementById('myChart'),
                 config
             );
-        </script>   
+        </script>
+
+        <svg></svg>
+
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script defer src="https://cdn.skypack.dev/d3-scale@4"></script>
+        <script defer src="./app.js"></script>
     </div>
 </body>
 
